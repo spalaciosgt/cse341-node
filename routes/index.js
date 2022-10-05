@@ -1,7 +1,11 @@
-const routes = require('express').Router();
+// Import express 
+const express = require('express');
 
-routes.get('/', (req, res) => {
-    res.send('Hello Samuel Palacios!');
-});
+// Instance for managing routers
+const router = express.Router();
 
-module.exports = routes;
+// Redirection to contacts router
+router.use('/contacts', require('./contacts'))
+
+// Export router instance
+module.exports = router;
