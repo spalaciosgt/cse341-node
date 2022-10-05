@@ -1,0 +1,19 @@
+// From localhost
+GET http://localhost:8090/contacts 
+###
+GET http://localhost:8090/contacts/633c5859e633fcd48eb82ab7
+###
+GET http://localhost:8090/contacts/633c58f7e633fcd48eb82ab8
+###
+GET http://localhost:8090/contacts/633c5943e633fcd48eb82ab9
+###
+
+// From render
+GET https://week02-samuel-palacios-cse341.onrender.com/contacts 
+###
+GET https://week02-samuel-palacios-cse341.onrender.com/contacts/633c5859e633fcd48eb82ab7
+###
+GET https://week02-samuel-palacios-cse341.onrender.com/contacts/633c58f7e633fcd48eb82ab8
+###
+GET https://week02-samuel-palacios-cse341.onrender.com/contacts/633c5943e633fcd48eb82ab9
+###
