@@ -1,0 +1,32 @@
+// From Localhost
+
+### Get all contacts via GET
+GET http://localhost:8090/contacts
+### Get a specific contact via GET
+GET http://localhost:8090/contacts/633c58f7e633fcd48eb82ab8
+### Create one contact via POST 
+POST http://localhost:8090/contacts HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName": "Homero", 
+    "lastName": "Simpson", 
+    "email": "homerosimpson@gmail.com", 
+    "favoriteColor": "Yellow", 
+    "birthday":"01/01/189"
+}
+### Update a specific contact via PUT
+PUT http://localhost:8090/contacts/63404331b3b08f4ca18d79f6 HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName": "Homer", 
+    "lastName": "Simpson", 
+    "email": "homersimpson@gmail.com", 
+    "favoriteColor": "Pink", 
+    "birthday":"05/01/189"
+}
+### Delete a specific contact via DELETE
+DELETE http://localhost:8090/contacts/63404331b3b08f4ca18d79f6 HTTP/1.1
+
+// From Render https://week03-samuel-palacios-cse341.onrender.com
