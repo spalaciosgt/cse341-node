@@ -115,7 +115,7 @@ const createNewContact = async (req, res) => {
     
     // If one document was altered 
     if (resMongo.deletedCount > 0) {
-      // Send HTTP 204 status Ok
+      // Send HTTP 200 status Ok
       res.status(200).send();
     } else {
       // Send HTTP 500 Error status
