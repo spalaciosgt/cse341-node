@@ -6,7 +6,7 @@ const doc = {
     description: 'Contacts App for CSE 341 Samuel Palacios',
   },
   host: 'week04-samuel-palacios-cse341.onrender.com',
-  schemes: ['http'],
+  schemes: ['https'],
 };
 
 const outputFile = './swagger-output.json';
