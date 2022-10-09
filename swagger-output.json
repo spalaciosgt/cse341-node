@@ -8,7 +8,7 @@
   "host": "week04-samuel-palacios-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
