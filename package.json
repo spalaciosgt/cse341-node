@@ -8,7 +8,8 @@
     "start": "node app.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "swagger-autogen": "node swagger.js"
   },
   "repository": {
     "type": "git",
@@ -28,13 +29,15 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "mongodb": "^4.10.0",
-    "mongoose": "^6.6.4"
+    "mongoose": "^6.6.4",
+    "swagger-ui-express": "^4.5.0"
   },
   "devDependencies": {
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.20",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "swagger-autogen": "^2.22.0"
   }
 }

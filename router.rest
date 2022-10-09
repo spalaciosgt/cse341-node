@@ -31,11 +31,11 @@ DELETE http://localhost:8090/contacts/63404cd2395f79e5c7dec577 HTTP/1.1
 
 // From Render https://week03-samuel-palacios-cse341.onrender.com
 ### Get all contacts via GET
-GET https://week03-samuel-palacios-cse341.onrender.com/contacts
+GET https://week04-samuel-palacios-cse341.onrender.com/contacts
 ### Get a specific contact via GET
-GET https://week03-samuel-palacios-cse341.onrender.com/contacts/633c58f7e633fcd48eb82ab8
+GET https://week04-samuel-palacios-cse341.onrender.com/contacts/633c58f7e633fcd48eb82ab8
 ### Create one contact via POST 
-POST https://week03-samuel-palacios-cse341.onrender.com/contacts HTTP/1.1 
+POST https://week04-samuel-palacios-cse341.onrender.com/contacts HTTP/1.1 
 content-type: application/json
 
 {
@@ -46,7 +46,7 @@ content-type: application/json
     "birthday":"01/01/189"
 }
 ### Update a specific contact via PUT
-PUT https://week03-samuel-palacios-cse341.onrender.com/contacts/63404d0bd91cbe013f9c9a58 HTTP/1.1 
+PUT https://week04-samuel-palacios-cse341.onrender.com/contacts/63404d0bd91cbe013f9c9a58 HTTP/1.1 
 content-type: application/json
 
 {
@@ -57,4 +57,6 @@ content-type: application/json
     "birthday":"05/01/189"
 }
 ### Delete a specific contact via DELETE
-DELETE https://week03-samuel-palacios-cse341.onrender.com/contacts/63404d0bd91cbe013f9c9a58 HTTP/1.1
+DELETE https://week04-samuel-palacios-cse341.onrender.com/contacts/63404d0bd91cbe013f9c9a58 HTTP/1.1
+
+// npm run swagger-autogen

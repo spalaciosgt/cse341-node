@@ -6,6 +6,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 // Case Function Getting All Contacts
 const getAll = async (req, res, next) => {
+
     // Getting Contacts Collection, without filters
     const myResults = await mongodb.getDb().
                             db('cse341').collection('contacts').find();
@@ -104,6 +105,11 @@ const createNewContact = async (req, res) => {
   
   // Function to delete one specific contact
   const deleteOneContact = async (req, res) => {
+
+    /* #swagger.parameters['parameterName'] = {
+        in: <string>     
+    } */
+
     // Getting the contact Id
     const contactId = new ObjectId(req.params.id);
 
