@@ -2,10 +2,10 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'Contacts App',
-    description: 'Contacts App for CSE 341 Samuel Palacios',
+    title: 'Electrical Commercial Measuring App',
+    description: 'Browsing Electrical Commercial Measuring App for CSE 341 Samuel Palacios',
   },
-  host: 'week04-samuel-palacios-cse341.onrender.com',
+  host: 'week05-samuel-palacios-cse341.onrender.com',
   schemes: ['https'],
 };
 

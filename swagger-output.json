@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Contacts App",
-    "description": "Contacts App for CSE 341 Samuel Palacios",
+    "title": "Electrical Commercial Measuring App",
+    "description": "Browsing Electrical Commercial Measuring App for CSE 341 Samuel Palacios",
     "version": "1.0.0"
   },
-  "host": "week04-samuel-palacios-cse341.onrender.com",
+  "host": "week05-samuel-palacios-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -18,7 +18,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/meters/": {
       "get": {
         "description": "",
         "produces": [
@@ -26,8 +26,8 @@
         ],
         "parameters": [],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           }
         }
       },
@@ -40,19 +40,28 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "id_meter": {
                   "example": "any"
                 },
-                "lastName": {
+                "point_name": {
                   "example": "any"
                 },
-                "email": {
+                "type_meter": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "serial_number": {
                   "example": "any"
                 },
-                "birthday": {
+                "maker": {
+                  "example": "any"
+                },
+                "model": {
+                  "example": "any"
+                },
+                "habilitation_date": {
+                  "example": "any"
+                },
+                "state": {
                   "example": "any"
                 }
               }
@@ -69,7 +78,42 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/meters/{id_meter}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id_meter",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/measures/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/measures/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -84,70 +128,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "201": {
+            "description": "Created"
           }
         }
       }

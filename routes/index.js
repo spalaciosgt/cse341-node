@@ -15,8 +15,11 @@ var options = {
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument, options));
 
-// Redirection to contacts router
-router.use("/contacts", require("./contacts"));
+// Redirection to meters router
+router.use("/meters", require("./meters"));
+
+// Redirection to measures router
+router.use("/measures", require("./measures"));
 
 // Export router instance
 module.exports = router;

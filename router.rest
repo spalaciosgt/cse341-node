@@ -1,62 +1,46 @@
 // From Localhost
 
-### Get all contacts via GET
-GET http://localhost:8090/contacts
-### Get a specific contact via GET
-GET http://localhost:8090/contacts/633c58f7e633fcd48eb82ab8
-### Create one contact via POST 
-POST http://localhost:8090/contacts HTTP/1.1 
+### Get all meters via GET
+GET http://localhost:8090/meters
+### Get all measures via GET
+GET http://localhost:8090/measures
+### Get a specific meter via GET
+GET http://localhost:8090/meters/2
+### Create one meter via POST 
+POST http://localhost:8090/meters HTTP/1.1 
 content-type: application/json
 
 {
-    "firstName": "Homero", 
-    "lastName": "Simpson", 
-    "email": "homerosimpson@gmail.com", 
-    "favoriteColor": "Yellow", 
-    "birthday":"01/01/189"
+    "id_meter": 4,
+    "point_name": "Central Chixoy IV",
+    "type_meter": "G",
+    "serial_number": "SN15204099",
+    "maker": "ION",
+    "model": "ION1510",
+    "habilitation_date": "03-01-2022",
+    "state": "Active"
 }
-### Update a specific contact via PUT
-PUT http://localhost:8090/contacts/63404cd2395f79e5c7dec577 HTTP/1.1 
+
+// From Render
+### Get all meters via GET
+GET https://week05-samuel-palacios-cse341.onrender.com/meters
+### Get all measures via GET
+GET https://week05-samuel-palacios-cse341.onrender.com/meausres
+### Get a specific meter via GET
+GET https://week05-samuel-palacios-cse341.onrender.com/meters/2
+### Create one meter via POST 
+POST https://week05-samuel-palacios-cse341.onrender.com/meters HTTP/1.1 
 content-type: application/json
 
 {
-    "firstName": "Homer", 
-    "lastName": "Simpson", 
-    "email": "homersimpson@gmail.com", 
-    "favoriteColor": "Pink", 
-    "birthday":"05/01/189"
+    "id_meter": 4,
+    "point_name": "Central Chixoy IV",
+    "type_meter": "G",
+    "serial_number": "SN15204099",
+    "maker": "ION",
+    "model": "ION1510",
+    "habilitation_date": "03-01-2022",
+    "state": "Active"
 }
-### Delete a specific contact via DELETE
-DELETE http://localhost:8090/contacts/63404cd2395f79e5c7dec577 HTTP/1.1
-
-// From Render https://week03-samuel-palacios-cse341.onrender.com
-### Get all contacts via GET
-GET https://week04-samuel-palacios-cse341.onrender.com/contacts
-### Get a specific contact via GET
-GET https://week04-samuel-palacios-cse341.onrender.com/contacts/633c58f7e633fcd48eb82ab8
-### Create one contact via POST 
-POST https://week04-samuel-palacios-cse341.onrender.com/contacts HTTP/1.1 
-content-type: application/json
-
-{
-    "firstName": "Homero", 
-    "lastName": "Simpson", 
-    "email": "homerosimpson@gmail.com", 
-    "favoriteColor": "Yellow", 
-    "birthday":"01/01/189"
-}
-### Update a specific contact via PUT
-PUT https://week04-samuel-palacios-cse341.onrender.com/contacts/63404d0bd91cbe013f9c9a58 HTTP/1.1 
-content-type: application/json
-
-{
-    "firstName": "Homer", 
-    "lastName": "Simpson", 
-    "email": "homersimpson@gmail.com", 
-    "favoriteColor": "Black", 
-    "birthday":"05/01/189"
-}
-### Delete a specific contact via DELETE
-DELETE https://week04-samuel-palacios-cse341.onrender.com/contacts/63404d0bd91cbe013f9c9a58 HTTP/1.1
 
 // npm run swagger-autogen
