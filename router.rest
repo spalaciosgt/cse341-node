@@ -39,7 +39,42 @@ content-type: application/json
 DELETE http://localhost:8090/meters/4 HTTP/1.1
 
 //
-// From Render
+// From Render: https://week06-samuel-palacios-cse341.onrender.com
 //
+### Get all meters via GET
+GET https://week06-samuel-palacios-cse341.onrender.com/meters
+### Get all measures via GET
+GET https://week06-samuel-palacios-cse341.onrender.com/measures
+### Get a specific meter via GET
+GET https://week06-samuel-palacios-cse341.onrender.com/meters/1
+### Create one meter via POST 
+POST https://week06-samuel-palacios-cse341.onrender.com/meters HTTP/1.1 
+content-type: application/json
+
+{
+    "id_meter" : 4, 
+    "point_name": "Central Chixoy IV",
+    "type_meter": "G",
+    "serial_number": "SN15204099",
+    "maker": "ION",
+    "model": "ION1510",
+    "habilitation_date": "03-01-2022",
+    "state": "Active"
+}
+### Update a specific contact via PUT
+PUT https://week06-samuel-palacios-cse341.onrender.com/meters/4 HTTP/1.1  
+content-type: application/json
+
+{
+    "point_name": "Central Chixoy 4",
+    "type_meter": "G",
+    "serial_number": "SN15204099",
+    "maker": "ION",
+    "model": "ION1510",
+    "habilitation_date": "03-01-2022",
+    "state": "Active"
+}
+### Delete a specific meter via DELETE
+DELETE https://week06-samuel-palacios-cse341.onrender.com/meters/4 HTTP/1.1
 
 // npm run swagger-autogen
