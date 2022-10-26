@@ -7,7 +7,7 @@ GET http://localhost:8090/meters
 ### Get all measures via GET
 GET http://localhost:8090/measures
 ### Get a specific meter via GET
-GET http://localhost:8090/meters/1
+GET http://localhost:8090/meters/1 
 ### Create one meter via POST 
 POST http://localhost:8090/meters HTTP/1.1 
 content-type: application/json
