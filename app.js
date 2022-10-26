@@ -23,6 +23,8 @@ myApp.use(bodyParser.json())
 // Staring database access service    
 mongodb.initDb((err, mongodb) => {
   if (err) {
+
+    // *** Handling Errors *** //
     console.log(err);
   } else {
     // Starting app service and listening to on 8080

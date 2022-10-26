@@ -5,7 +5,7 @@ const doc = {
     title: 'Electrical Commercial Measuring App',
     description: 'Browsing Electrical Commercial Measuring App for CSE 341 Samuel Palacios',
   },
-  host: 'week05-samuel-palacios-cse341.onrender.com',
+  host: 'week06-samuel-palacios-cse341.onrender.com',
   schemes: ['https'],
 };
 

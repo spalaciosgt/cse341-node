@@ -24,7 +24,8 @@ const initDb = (callback) => {
         // Handling callback
         callback(null, db);
     })
-    // Handling exceptions
+    
+    // *** Handling Errors *** //
     .catch((err) => {
         callback(err);
     });
@@ -34,6 +35,8 @@ const initDb = (callback) => {
 const getDb = () => {
     // If it is not instanced, throws an exception
     if (!db) {
+        
+        // *** Handling Errors *** //
         throw Error('Db not initialized');
     }
     // Otherwise, simply return it!

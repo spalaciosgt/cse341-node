@@ -5,7 +5,7 @@
     "description": "Browsing Electrical Commercial Measuring App for CSE 341 Samuel Palacios",
     "version": "1.0.0"
   },
-  "host": "week05-samuel-palacios-cse341.onrender.com",
+  "host": "week06-samuel-palacios-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -95,6 +95,74 @@
         "responses": {
           "201": {
             "description": "Created"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_meter",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "point_name": {
+                  "example": "any"
+                },
+                "type_meter": {
+                  "example": "any"
+                },
+                "serial_number": {
+                  "example": "any"
+                },
+                "maker": {
+                  "example": "any"
+                },
+                "model": {
+                  "example": "any"
+                },
+                "habilitation_date": {
+                  "example": "any"
+                },
+                "state": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_meter",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
