@@ -52,7 +52,7 @@ POST https://week06-samuel-palacios-cse341.onrender.com/meters HTTP/1.1
 content-type: application/json
 
 {
-    "id_meter" : 4, 
+    "id_meter" : 5, 
     "point_name": "Central Chixoy IV",
     "type_meter": "G",
     "serial_number": "SN15204099",
