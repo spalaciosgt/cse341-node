@@ -2,6 +2,14 @@
 // From Localhost
 //
 
+GET http://localhost:4000
+
+
+content-type: application/json
+
+{
+
+}
 ### Get all meters via GET
 GET http://localhost:8090/meters
 ### Get all measures via GET
