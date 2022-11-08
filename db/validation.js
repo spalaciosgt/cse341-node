@@ -14,3 +14,12 @@ exports.insertUpdateMeter = [
     check('model', 'Model is required').not().isEmpty(),
     check('state', 'State is required').not().isEmpty()
 ]
+
+// *** Data Validation *** //
+exports.insertUpdateMeasure = [
+    check('id_meter', 'Id Meter is requied').not().isEmpty(),        
+    check('measure_date', 'Measure date is requied').not().isEmpty(),
+    check('state', 'State is required').not().isEmpty(),
+    check('measure_frequency', 'Measure frequency is required').not().isEmpty(),
+    check('measure_data', 'Measure data must be an array').isArray()
+]

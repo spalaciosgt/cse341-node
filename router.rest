@@ -1,21 +1,3 @@
-//
-// From Localhost
-//
-
-GET http://localhost:4000
-
-
-content-type: application/json
-
-{
-
-}
-### Get all meters via GET
-GET http://localhost:8090/meters
-### Get all measures via GET
-GET http://localhost:8090/measures
-### Get a specific meter via GET
-GET http://localhost:8090/meters/1 
 ### Create one meter via POST 
 POST http://localhost:8090/meters HTTP/1.1 
 content-type: application/json
@@ -30,59 +12,29 @@ content-type: application/json
     "habilitation_date": "03-01-2022",
     "state": "Active"
 }
-### Update a specific contact via PUT
-PUT http://localhost:8090/meters/4 HTTP/1.1  
+
+### Create one measure via POST 
+POST http://localhost:8090/measure HTTP/1.1 
 content-type: application/json
 
 {
-    "point_name": "Central Chixoy 4",
-    "type_meter": "G",
-    "serial_number": "SN15204099",
-    "maker": "ION",
-    "model": "ION1510",
-    "habilitation_date": "03-01-2022",
-    "state": "Active"
+    "id_meter": 2,
+    "measure_date": "30-01-2022",
+    "state": "A", 
+    "measure_frequency": "30m",
+    "measure_data": [0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0.99,0,0.99,0.99]
 }
-### Delete a specific meter via DELETE
-DELETE http://localhost:8090/meters/4 HTTP/1.1
-
-//
-// From Render: https://week06-samuel-palacios-cse341.onrender.com
-//
-### Get all meters via GET
-GET https://week06-samuel-palacios-cse341.onrender.com/meters
-### Get all measures via GET
-GET https://week06-samuel-palacios-cse341.onrender.com/measures
-### Get a specific meter via GET
-GET https://week06-samuel-palacios-cse341.onrender.com/meters/1
-### Create one meter via POST 
-POST https://week06-samuel-palacios-cse341.onrender.com/meters HTTP/1.1 
-content-type: application/json
 
 {
-    "id_meter" : 5, 
-    "point_name": "Central Chixoy IV",
-    "type_meter": "G",
-    "serial_number": "SN15204099",
-    "maker": "ION",
-    "model": "ION1510",
-    "habilitation_date": "03-01-2022",
-    "state": "Active"
+    "id_meter": 2,
+    "measure_date": "30-01-2022",
+    "state": "A", 
+    "measure_frequency": "30m",
+    "measure_data": 0
 }
-### Update a specific contact via PUT
-PUT https://week06-samuel-palacios-cse341.onrender.com/meters/4 HTTP/1.1  
-content-type: application/json
-
-{
-    "point_name": "Central Chixoy 4",
-    "type_meter": "G",
-    "serial_number": "SN15204099",
-    "maker": "ION",
-    "model": "ION1510",
-    "habilitation_date": "03-01-2022",
-    "state": "Active"
-}
-### Delete a specific meter via DELETE
-DELETE https://week06-samuel-palacios-cse341.onrender.com/meters/4 HTTP/1.1
 
 // npm run swagger-autogen

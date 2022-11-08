@@ -5,7 +5,7 @@
     "description": "Browsing Electrical Commercial Measuring App for CSE 341 Samuel Palacios",
     "version": "1.0.0"
   },
-  "host": "week06-samuel-palacios-cse341.onrender.com",
+  "host": "week08-samuel-palacios-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -179,9 +179,46 @@
             "description": "Created"
           }
         }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id_meter": {
+                  "example": "any"
+                },
+                "measure_date": {
+                  "example": "any"
+                },
+                "state": {
+                  "example": "any"
+                },
+                "measure_frequency": {
+                  "example": "any"
+                },
+                "measure_data": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
-    "/measures/{id}": {
+    "/measures/{id_measure}": {
       "get": {
         "description": "",
         "produces": [
@@ -189,7 +226,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "id_measure",
             "in": "path",
             "required": true,
             "type": "string"
@@ -198,6 +235,68 @@
         "responses": {
           "201": {
             "description": "Created"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_measure",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id_meter": {
+                  "example": "any"
+                },
+                "measure_date": {
+                  "example": "any"
+                },
+                "state": {
+                  "example": "any"
+                },
+                "measure_frequency": {
+                  "example": "any"
+                },
+                "measure_data": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id_measure",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }

@@ -33,7 +33,7 @@ myApp.use(bodyParser.json())
     })
     .use(auth(config))    
     // Redirect to routes       
-    .use('/', requiresAuth(), require('./routes'),  
+    .use('/', requiresAuth(), require('./routes')    
     );
 
 // Staring database access service    
